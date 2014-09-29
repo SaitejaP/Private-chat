@@ -1,0 +1,725 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"so",
+				"socketId"
+			],
+			[
+				"su",
+				"usersInRoomSummary"
+			],
+			[
+				"us",
+				"usersInRoom"
+			],
+			[
+				"Us",
+				"UsersInRoomSummary"
+			],
+			[
+				"use",
+				"usersInRoom"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"ro",
+				"rooms"
+			],
+			[
+				"room",
+				"rooms"
+			],
+			[
+				"r",
+				"rooms"
+			],
+			[
+				"i",
+				"id"
+			],
+			[
+				"roo",
+				"room"
+			],
+			[
+				"ser",
+				"seriesName"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"add",
+				"addForm"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"e",
+				"err"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"fi",
+				"firstAired"
+			],
+			[
+				"episod",
+				"episodeName"
+			],
+			[
+				"episode",
+				"episodeNumber"
+			],
+			[
+				"series",
+				"seriesId"
+			],
+			[
+				"seri",
+				"seriesId"
+			],
+			[
+				"sh",
+				"showName"
+			],
+			[
+				"par",
+				"parseString"
+			],
+			[
+				"airs",
+				"airsTime"
+			],
+			[
+				"s",
+				"series"
+			],
+			[
+				"air",
+				"airsDayOfWeek"
+			],
+			[
+				"nam",
+				"seriesName"
+			],
+			[
+				"net",
+				"next"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"Sho",
+				"Show"
+			],
+			[
+				"ap",
+				"api"
+			],
+			[
+				"ne",
+				"next"
+			],
+			[
+				"usr",
+				"userSchema"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"g",
+				"gulp"
+			],
+			[
+				"angular",
+				"angular-strap"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"m",
+				"meta"
+			],
+			[
+				"b",
+				"body	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 1285,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 843,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/chat_server.js",
+			"settings":
+			{
+				"buffer_size": 2866,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 6 files for \"io.sockets.on\"\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/chat_server.js:\n   10  	io.set('log level', 1);\n   11  \n   12: 	io.sockets.on('connection', function(socket){\n   13  		guestNumber = assignGuestName(socket, guestNumber, nicknames, namesUsed);\n   14  		joinRoom(socket, 'lobby');\n\n1 match in 1 file\n\n\nSearching 6 files for \"console\"\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/chat_server.js:\n   18  \n   19  		socket.on('rooms', function(){\n   20: 			console.log(io.sockets.adapter.rooms);\n   21  			socket.emit('rooms', io.sockets.adapter.rooms);\n   22  		});\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/server.js:\n   49  \n   50  server.listen(3000,function(){\n   51: 	console.log(\"server starting at port: 3000\");\n   52  });\n   53  \n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 872,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "public/scripts/chat.js",
+			"settings":
+			{
+				"buffer_size": 797,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/scripts/chat_ui.js",
+			"settings":
+			{
+				"buffer_size": 1854,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 165,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app"
+	],
+	"file_history":
+	[
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/package.json",
+		"/home/saiteja/Untitled Document",
+		"/home/saiteja/Untitled",
+		"/home/saiteja/Documents/scissors/test.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/package.json",
+		"/home/saiteja/Documents/AngularJs/showTracker/gulpfile.js",
+		"/home/saiteja/Documents/Create a TV Show Tracker using AngularJS, Node.js and MongoDB.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/vendor/moment.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/stylesheets/style.scss",
+		"/home/saiteja/Desktop/iframe",
+		"/home/saiteja/Desktop/mini-project/public/js/script.js",
+		"/home/saiteja/Documents/pdfjs/package.json",
+		"/home/saiteja/Desktop/360Viewer-master/public/index.html",
+		"/home/saiteja/Documents/scissors/test.",
+		"/home/saiteja/Documents/scissors/app.js",
+		"/home/saiteja/Documents/app.js",
+		"/home/saiteja/Documents/AngularJs/gce/manifest.txt",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/index.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/controllers/add.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/views/detail.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/server.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/app.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/views/home.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/main.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/views/add.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/services/show.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/node_modules/jade/node_modules/constantinople/node_modules/uglify-js/node_modules/async/README.md",
+		"/home/saiteja/Documents/AngularJs/showTracker/node_modules/jade/node_modules/with/node_modules/uglify-js/node_modules/async/README.md",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/show.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/public/viewa/home.html",
+		"/home/saiteja/Documents/AngularJs/showTracker/app.js",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/public/index.html",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/public/app.js",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/server.js",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/gulpfile.js",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/public/stylesheets/style.scss",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/public/stylesheets/Link to style.css",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/public/vendor/angular-strap.js",
+		"/home/saiteja/Documents/AngularJs/Integrated/showTracker/app.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"join",
+			"handleRoomJoi",
+			"join",
+			"emit",
+			"join",
+			"console",
+			"adapter",
+			"mana",
+			"broad",
+			"io.sockets.on",
+			"broad",
+			"delete",
+			"for",
+			"delet",
+			"for",
+			"require('socket",
+			"message'",
+			"room change",
+			"is ",
+			"io.socket.manager",
+			"io.socket.",
+			"room",
+			"rooms",
+			"io",
+			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
+			"function handleRoomJoining(socket) {\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
+			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
+			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}\n",
+			"console",
+			"TV show has been added",
+			"added",
+			"already",
+			"filterByGenre",
+			"app.get('*', function(req, res) {\n  res.redirect('/#' + req.originalUrl);\n});",
+			"app.post('/api/shows', function (req, res, next){",
+			"post",
+			"fromnow",
+			"error",
+			"err",
+			"userSchema.pre('save', function(next) {\n  var user = this;\n  if (!user.isModified('password')) return next();\n  bcrypt.genSalt(10, function(err, salt) {\n    if (err) return next(err);\n    bcrypt.hash(user.password, salt, function(err, hash) {\n      if (err) return next(er",
+			"userSchema.pre('save', function(next) {\n  var user = this;\n  if (!user.isModified('password')) return next();\n  bcrypt.genSalt(10, function(err, salt) {\n    if (err) return next(err);\n    bcrypt.hash(user.password, salt, function(err, hash) {\n      if (err) return next(err);\n      user.password = hash;\n      next();\n    });\n  });\n});",
+			"app.post",
+			"save",
+			"seriesName",
+			"type=\"text/javascript\" ",
+			"scr=\"vendor",
+			"scr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"io.on",
+			"io.sockets.",
+			"",
+			"fromNow",
+			"",
+			"src=\"vendor",
+			"src"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27,
+								27
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/chat_server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 289.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										174,
+										187
+									],
+									[
+										538,
+										545
+									],
+									[
+										781,
+										788
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 221.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "public/scripts/chat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								797,
+								797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 62.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/scripts/chat_ui.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1663,
+								1663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 622.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"project": "multi-room chat app.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 186.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

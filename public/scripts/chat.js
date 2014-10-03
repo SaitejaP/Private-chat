@@ -2,10 +2,11 @@ var Chat = function (socket) {
 	this.socket = socket;
 };
 
-Chat.prototype.sendMessage = function(room, text) {
+Chat.prototype.sendMessage = function(room, text, patnerName) {
 	var message = {
 		room: room,
-		text: text
+		text: text,
+		patnerName: patnerName
 	};
 	this.socket.emit('message', message);
 };

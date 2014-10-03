@@ -6,19 +6,14 @@ function divSystemContentElement(message) {
 	return $('<div></div>').html('<i>' + message + '</i>');
 }
 
-function processUserInput(chatApp, socket) {
+function processUserInput(chatApp, socket, patnerName) {
 	var message = $('#send-message').val();
 	var systemMessage;
-	if (message.charAt(0) == '/') {
-		systemMessage = chatApp.processCommand(message);
-		if (systemMessage) {
-			$('#messages').append(divSystemContentElement(systemMessage));
-		}
-	} else {
-		chatApp.sendMessage($('#room').text(), message);
+
+		chatApp.sendMessage($('#room').text(), message, patnerName);
 		$('#messages').append(divEscapedContentElement(message));
 		$('#messages').scrollTop($('#messages').prop('scrollHeight'));
-	}
+
 	$('#send-message').val('');
 }
 
@@ -60,14 +55,16 @@ $(document).ready(function() {
 		}
 		$('#room-list div').replaceWith(divSystemContentElement(list));
 		$('#room-list div ul li').click(function() {
+			patnerName = $(this).text();
+			$(this).attr('id', 'newID');
 			$('#send-message').focus();
-		});		
+		});
 	});
 
 	$('#send-message').focus();
 	
 	$('#send-form').submit(function() {
-		processUserInput(chatApp, socket);
+		processUserInput(chatApp, socket, window.patnerName);
 		return false;
 	});
 });

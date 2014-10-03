@@ -4,40 +4,140 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"patnerId"
+			],
+			[
 				"so",
+				"socket"
+			],
+			[
+				"join",
+				"joinRoom"
+			],
+			[
+				"r",
+				"rString"
+			],
+			[
+				"soc",
 				"socketId"
+			],
+			[
+				"joi",
+				"joinRoom"
+			],
+			[
+				"has",
+				"hasOwnProperty"
+			],
+			[
+				"co",
+				"connection"
+			],
+			[
+				"ni",
+				"nickname"
+			],
+			[
+				"in",
+				"indexOf"
+			],
+			[
+				"si",
+				"socketId"
+			],
+			[
+				"o",
+				"on"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"ro",
+				"room"
+			],
+			[
+				"fi",
+				"function"
+			],
+			[
+				"sock",
+				"socket"
+			],
+			[
+				"ti",
+				"timestamp"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"on",
+				"onlineUsersId"
+			],
+			[
+				"le",
+				"length-1"
+			],
+			[
+				"li",
+				"list"
+			],
+			[
+				"di",
+				"divSystemContentElement"
+			],
+			[
+				"room",
+				"room-list"
+			],
+			[
+				"O",
+				"onlineUsersArr"
+			],
+			[
+				"usr",
+				"usersInRoom"
+			],
+			[
+				"us",
+				"usersInRoomSummary"
+			],
+			[
+				"user",
+				"User"
+			],
+			[
+				"nickna",
+				"nickname"
+			],
+			[
+				"S",
+				"Schema"
+			],
+			[
+				"Us",
+				"UserInTheRoom"
+			],
+			[
+				"re",
+				"res"
 			],
 			[
 				"su",
 				"usersInRoomSummary"
 			],
 			[
-				"us",
-				"usersInRoom"
-			],
-			[
-				"Us",
-				"UsersInRoomSummary"
-			],
-			[
 				"use",
 				"usersInRoom"
-			],
-			[
-				"co",
-				"console"
-			],
-			[
-				"ro",
-				"rooms"
-			],
-			[
-				"room",
-				"rooms"
-			],
-			[
-				"r",
-				"rooms"
 			],
 			[
 				"i",
@@ -68,16 +168,8 @@
 				"err"
 			],
 			[
-				"re",
-				"return"
-			],
-			[
 				"err",
 				"err"
-			],
-			[
-				"fi",
-				"firstAired"
 			],
 			[
 				"episod",
@@ -106,10 +198,6 @@
 			[
 				"airs",
 				"airsTime"
-			],
-			[
-				"s",
-				"series"
 			],
 			[
 				"air",
@@ -144,10 +232,6 @@
 				"next"
 			],
 			[
-				"usr",
-				"userSchema"
-			],
-			[
 				"fun",
 				"function"
 			],
@@ -158,10 +242,6 @@
 			[
 				"angular",
 				"angular-strap"
-			],
-			[
-				"li",
-				"link	Tag"
 			],
 			[
 				"m",
@@ -176,10 +256,37 @@
 	"buffers":
 	[
 		{
-			"file": "server.js",
+			"contents": "var socketio = require(\"socket.io\");\nvar _ = require(\"underscore\");\nvar io;\nvar guestNumber = 1;\nvar nicknames = {};\nvar namesUsed = {};\nvar currentRoom = {};\n\nexports.listen = function(server){\n	io = socketio(server);\n	io.set('log level', 1);\n\n	io.on('connection', function(socket){\n		guestNumber = assignGuestName(socket);\n		socket.join('lobby');\n		handleMessageUnicasting(socket);\n		handleClientDisconnection(socket);\n\n		setInterval(function(){\n			var onlineUsersId = io.nsps['/'].connected;\n			var size = Object.size(onlineUsersId);\n			var onlineUsers = \"\";\n			if(size > 1){\n				for (var socketId in onlineUsersId) {\n					if (socketId != socket.id)\n		    		onlineUsers += (nicknames[socketId].toString() + \" \");\n				}\n				onlineUsers = onlineUsers.substring(0,onlineUsers.length-1)\n			}\n			socket.emit('onlineUsers', onlineUsers);\n		}, 1000);\n	});\n}\n\nfunction assignGuestName(socket){\n	var name = 'Guest' + guestNumber;\n	nicknames[socket.id] = name;\n	socket.emit('nameResult', {\n		success: true,\n		name: name\n	});\n	namesUsed[name] = socket.id;\n	return guestNumber + 1;\n}\n\nfunction handleMessageUnicasting(socket) {\n	socket.on('message', function(message) {\n		var patnerId = namesUsed[message.patnerName]\n	console.log(\"message recieved\");\n	console.log('patner id = '+patnerId);\n\n		socket.emit(nicknames[patnerId], {\n			text: message.text,\n			from: nicknames[socket.id],\n			timeStamp: message.timeStamp\n		});\n	});\n}\n\nfunction handleClientDisconnection(socket) {\n	socket.on('disconnect', function() {\n		var name = nicknames[socket.id];\n		delete namesUsed[name];\n		delete nicknames[socket.id];\n	});\n}\n\nObject.size = function(Obj){\n	var size = 0, key;\n	for(key in Obj){\n		if(Obj.hasOwnProperty(key))\n			size++;\n	}\n	return size;\n}",
+			"file": "lib/chat_server.js",
+			"file_size": 1806,
+			"file_write_time": 130567939364709012,
 			"settings":
 			{
-				"buffer_size": 1285,
+				"buffer_size": 1728,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/app.js",
+			"settings":
+			{
+				"buffer_size": 677,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n	var UserInTheRoom = io.nsps['/'].adapter.rooms[room],\n	for(var id in UserInTheRoom){\n		to = nicknames[socketId].toString();\n		break;\n	}\n	\n	namesUsed.push(name);\n	user = new User({\n		_id: socket.id,\n		name: name,\n		to: to,\n		message: \n	})\n\n\n		var usersInRoomSummary = \"Users in this room: \"\n	var usersInRoom = io.nsps['/'].adapter.rooms[room];\n		for (var socketId in usersInRoom) {\n    		usersInRoomSummary += (nicknames[socketId].toString() + \" \");\n		}\n\n		console.log(usersInRoomSummary);\n\n		socket.emit('message', {text: usersInRoomSummary});\n\n\nio.nsps['/'].adapter.rooms[room] // clients connected to room\nio.nsps['/'].connected  //all clients connected to socket.io\nio.sockets.adapter.rooms  //all rooms\n\n\nMyModel.update({@1 name: 'Tobi' }, {@2 ferret: true }, {@3 multi: true }, function @4(err, numberAffected, raw) {\n  if (err) return handleError(err);\n  console.log('The number of updated documents was %d', numberAffected);\n  console.log('The raw response from Mongo was ', raw);\n}); \n\n\n@1 - CONDITIONS\n@2 - UPDATE\n@3 - OPTOPNS {safe, UPSERT, MULTI, STRICT, OVERWITE}\n@4 - ERR, count of updated documents Mongo reported, full response from Mongo\n\n\nvar patners = io.nsps[a].adapter.rooms['lobby'];\n		for(var socketId in patners){\n			if(socket.id != socketId){\n			var patner = {\n				nickname: nicknames[socketId].toString(),\n				socketId: socketId };\n			break;\n			}\n		}\n\nfunction randomString(length) {\n	var StrWallet =  '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    var result = '';\n    for (var i = length; i > 0; --i) result += StrWallet[Math.round(Math.random() * (StrWallet.length - 1))];\n    return result;\n}\n\nsocket.leave(currentRoom[socket.id]);\n\n\nvar userSchema = new mongoose.Schema({\n	id: String,\n	name: String,\n	to: [{\n		name: String,\n		message: [{\n			content: String,\n			timestamp: Date\n		}]\n	}]\n});\n\nvar User = mongoose.model(' User', userSchema);\nmongoose.connect('localhost:27017', function(){\n	console.log('mongoose connected');\n});\n\n		var patners = io.nsps['/'].adapter.rooms['lobby'];\n		for(var socketId in patners){\n			if(socket.id != socketId){\n			var patner = {\n				nickname: nicknames[socketId].toString(),\n				socketId: socketId };\n			break;\n			}\n		}\n\n\nObject.size = function(Obj){\n	var size = 0, key;\n	for(key in Obj){\n		if(Obj.hasOwnProperty(key))\n			size++;\n	}\n	return size;\n}\n\n		setInterval(function(){\n			var onlineUsersId = io.nsps['/'].connected;\n			var size = Object.size(onlineUsersId);\n			var onlineUsers = \"\";\n			if(size > 1){\n				for (var socketId in onlineUsersId) {\n					if (socketId != socket.id)\n		    		onlineUsers += (nicknames[socketId].toString() + \" \");\n				}\n				onlineUsers = onlineUsers.substring(0,onlineUsers.length-1)\n			}\n			socket.emit('onlineUsers', onlineUsers);\n		}, 1000);\n	});\n\n",
+			"settings":
+			{
+				"buffer_size": 2768,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/scripts/chat.js",
+			"settings":
+			{
+				"buffer_size": 851,
 				"line_ending": "Windows"
 			}
 		},
@@ -187,33 +294,7 @@
 			"file": "public/index.html",
 			"settings":
 			{
-				"buffer_size": 843,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "lib/chat_server.js",
-			"settings":
-			{
-				"buffer_size": 2866,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 6 files for \"io.sockets.on\"\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/chat_server.js:\n   10  	io.set('log level', 1);\n   11  \n   12: 	io.sockets.on('connection', function(socket){\n   13  		guestNumber = assignGuestName(socket, guestNumber, nicknames, namesUsed);\n   14  		joinRoom(socket, 'lobby');\n\n1 match in 1 file\n\n\nSearching 6 files for \"console\"\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/chat_server.js:\n   18  \n   19  		socket.on('rooms', function(){\n   20: 			console.log(io.sockets.adapter.rooms);\n   21  			socket.emit('rooms', io.sockets.adapter.rooms);\n   22  		});\n\n/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/server.js:\n   49  \n   50  server.listen(3000,function(){\n   51: 	console.log(\"server starting at port: 3000\");\n   52  });\n   53  \n\n2 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 872,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "public/scripts/chat.js",
-			"settings":
-			{
-				"buffer_size": 797,
+				"buffer_size": 1058,
 				"line_ending": "Windows"
 			}
 		},
@@ -221,15 +302,7 @@
 			"file": "public/scripts/chat_ui.js",
 			"settings":
 			{
-				"buffer_size": 1854,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 165,
+				"buffer_size": 2100,
 				"line_ending": "Windows"
 			}
 		}
@@ -261,11 +334,15 @@
 	},
 	"expanded_folders":
 	[
-		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app"
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib"
 	],
 	"file_history":
 	[
+		"/home/saiteja/Documents/AngularJs/showTracker/server.js",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/server.js",
 		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/package.json",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/generator/app.js",
 		"/home/saiteja/Untitled Document",
 		"/home/saiteja/Untitled",
 		"/home/saiteja/Documents/scissors/test.js",
@@ -285,7 +362,6 @@
 		"/home/saiteja/Documents/AngularJs/showTracker/public/index.html",
 		"/home/saiteja/Documents/AngularJs/showTracker/public/controllers/add.js",
 		"/home/saiteja/Documents/AngularJs/showTracker/public/views/detail.html",
-		"/home/saiteja/Documents/AngularJs/showTracker/server.js",
 		"/home/saiteja/Documents/AngularJs/showTracker/public/app.js",
 		"/home/saiteja/Documents/AngularJs/showTracker/public/views/home.html",
 		"/home/saiteja/Documents/AngularJs/showTracker/public/main.js",
@@ -323,6 +399,70 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"processUserInput",
+			"click",
+			"curr",
+			"size",
+			"curr",
+			"current",
+			"wallet",
+			"click",
+			"leave",
+			"join",
+			"current",
+			"handleRoomJoining",
+			", room",
+			"patner",
+			"room",
+			"join",
+			"room.newRoom",
+			"handleRoomJoining(",
+			"handleRoomJoining(socket,",
+			"handleRoomJoining(socket, socket)",
+			"join",
+			"patner",
+			"get",
+			"patner",
+			".join",
+			"push",
+			"change",
+			"joinRoom",
+			"save",
+			"' ",
+			"error",
+			"err",
+			"not",
+			"nick",
+			"user not",
+			"handle",
+			"send",
+			"'message'",
+			"save",
+			"handleMessageBroadcasting",
+			"patner",
+			"user",
+			"emit('message",
+			"message",
+			"schema",
+			"sendMessage",
+			"val",
+			"join",
+			"io.",
+			"io.'",
+			"nickname",
+			"process",
+			"consol",
+			"console.log",
+			"size",
+			"jque",
+			"Sch",
+			"conn",
+			"id",
+			"nicknames",
+			"names",
+			"namesU",
+			"render",
+			"view",
 			"join",
 			"handleRoomJoi",
 			"join",
@@ -377,6 +517,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"StrWallet",
 			"io.on",
 			"io.sockets.",
 			"",
@@ -394,24 +535,117 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "lib/chat_server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1285,
+						"buffer_size": 1728,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27,
-								27
+								422,
+								851
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2766,
+								2766
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1404.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/scripts/chat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
 							]
 						],
 						"settings":
@@ -423,24 +657,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 4,
 					"file": "public/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 843,
+						"buffer_size": 1058,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								609,
+								609
 							]
 						],
 						"settings":
@@ -456,138 +690,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "lib/chat_server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2866,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								587,
-								587
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 289.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 872,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										174,
-										187
-									],
-									[
-										538,
-										545
-									],
-									[
-										781,
-										788
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								541,
-								541
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 221.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "public/scripts/chat.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 797,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								797,
-								797
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 62.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
 					"buffer": 5,
 					"file": "public/scripts/chat_ui.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1854,
+						"buffer_size": 2100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1663,
-								1663
+								1797,
+								1797
 							]
 						],
 						"settings":
@@ -596,38 +712,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 622.0,
+						"translation.y": 740.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								45,
-								45
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -709,14 +797,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 186.0,
 	"status_bar_visible": true,
 	"template_settings":

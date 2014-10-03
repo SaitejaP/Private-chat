@@ -2,11 +2,10 @@ var Chat = function (socket) {
 	this.socket = socket;
 };
 
-Chat.prototype.sendMessage = function(patnerName, text, timestamp) {
+Chat.prototype.sendMessage = function(room, text) {
 	var message = {
-		patnerName: patnerName,
-		text: text,
-		timestamp: timestamp
+		room: room,
+		text: text
 	};
 	this.socket.emit('message', message);
 };
@@ -24,7 +23,6 @@ Chat.prototype.processCommand = function(command) {
 		.substring(1, words[0].length)
 		.toLowerCase();
 	var message = false;
-
 	switch(command) {
 		case 'join':
 			words.shift();
@@ -37,7 +35,7 @@ Chat.prototype.processCommand = function(command) {
 			this.socket.emit('nameAttempt', name);
 			break;
 		default:
-			message = 'Unrecognised command';
+			message = 'Unrecognized command.';
 			break;
 	}
 	return message;

@@ -1,32 +1,34 @@
-function divEscapedContentElement (message) {
+function divEscapedContentElement(message) {
 	return $('<div></div>').text(message);
 }
 
-function divSystemContentElement (message) {
-	return $('<div></div>').html(message);
+function divSystemContentElement(message) {
+	return $('<div></div>').html('<i>' + message + '</i>');
 }
 
 function processUserInput(chatApp, socket) {
 	var message = $('#send-message').val();
 	var systemMessage;
+	if (message.charAt(0) == '/') {
+		systemMessage = chatApp.processCommand(message);
+		if (systemMessage) {
+			$('#messages').append(divSystemContentElement(systemMessage));
+		}
+	} else {
+		chatApp.sendMessage($('#room').text(), message);
 		$('#messages').append(divEscapedContentElement(message));
 		$('#messages').scrollTop($('#messages').prop('scrollHeight'));
-	console.log("message added");
-		$('#send-message').val('');
-		chatApp.sendMessage(patnerName, message, Date.now()); 
-	console.log("message sent");
-
+	}
+	$('#send-message').val('');
 }
 
 var socket = io();
 
 $(document).ready(function() {
 	var chatApp = new Chat(socket);
-
-	socket.on('nameResult', function(result) { 
+	
+	socket.on('nameResult', function(result) {
 		var message;
-		window.name = result.name;
-		console.log(name);
 		if (result.success) {
 			message = 'You are now known as ' + result.name + '.';
 		} else {
@@ -40,8 +42,9 @@ $(document).ready(function() {
 		$('#messages').append(divSystemContentElement('Room changed.'));
 	});
 
-	socket.on('message', function (message) { 
-		$('#messages').append(divSystemContentElement(message.text));
+	socket.on('message', function (message) {
+		var newElement = $('<div></div>').text(message.text);
+		$('#messages').append(newElement);
 	});
 
 	socket.on('onlineUsers', function(onlineUsers){	
@@ -57,25 +60,12 @@ $(document).ready(function() {
 		}
 		$('#room-list div').replaceWith(divSystemContentElement(list));
 		$('#room-list div ul li').click(function() {
-			console.log("clicked"); 
-			window.patner = $(this).text();
-			console.log(patner);
 			$('#send-message').focus();
 		});		
 	});
 
-	console.log("name "+ window.name);
-
-	socket.on(name, function(message){
-		console.log('gotMessage');
-		window.messages[message.from].push({
-			message: message.text,
-			timestamp: message.timestamp
-		});
-	});
-
 	$('#send-message').focus();
-
+	
 	$('#send-form').submit(function() {
 		processUserInput(chatApp, socket);
 		return false;

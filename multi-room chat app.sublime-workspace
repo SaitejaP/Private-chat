@@ -4,12 +4,216 @@
 		"selected_items":
 		[
 			[
+				"t",
+				"text"
+			],
+			[
+				"san",
+				"sanitizeText"
+			],
+			[
+				"ema",
+				"emailid"
+			],
+			[
+				"doc",
+				"docs"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ex",
+				"exec"
+			],
+			[
+				"fi",
+				"find"
+			],
+			[
+				"sa",
+				"save"
+			],
+			[
+				"si",
+				"SignupSchema"
+			],
+			[
+				"un",
+				"unseen"
+			],
+			[
+				"ms",
+				"msgPack"
+			],
+			[
+				"tr",
+				"trim"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"on",
+				"onlineUsers"
+			],
+			[
+				"is",
+				"isNameReapeted"
+			],
+			[
+				"nam",
+				"name"
+			],
+			[
+				"use",
+				"user"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"m",
+				"msgPack"
+			],
+			[
 				"pa",
-				"patnerId"
+				"patnerName"
+			],
+			[
+				"msg",
+				"msgText"
+			],
+			[
+				"text",
+				"textbox"
+			],
+			[
+				"te",
+				"textbox"
+			],
+			[
+				"US",
+				"userEmail"
+			],
+			[
+				"USE",
+				"userName"
+			],
+			[
+				"email",
+				"emailIds"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"font",
+				"font-size"
 			],
 			[
 				"so",
 				"socket"
+			],
+			[
+				"eee",
+				"eee"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pat",
+				"patner2"
+			],
+			[
+				"scr",
+				"scripts"
+			],
+			[
+				"i",
+				"index"
+			],
+			[
+				"patne",
+				"patner1"
+			],
+			[
+				"M",
+				"Message"
+			],
+			[
+				"patner",
+				"patnerId"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"name",
+				"namesUsed"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"h",
+				"h3	Tag"
+			],
+			[
+				"soc",
+				"scope"
+			],
+			[
+				"o",
+				"onlineUsers"
+			],
+			[
+				"H",
+				"H1	Tag"
+			],
+			[
+				"s",
+				"src"
+			],
+			[
+				"na",
+				"namesUsed"
+			],
+			[
+				"new",
+				"newID"
+			],
+			[
+				"get",
+				"getPatnerName"
 			],
 			[
 				"join",
@@ -20,10 +224,6 @@
 				"rString"
 			],
 			[
-				"soc",
-				"socketId"
-			],
-			[
 				"joi",
 				"joinRoom"
 			],
@@ -32,36 +232,12 @@
 				"hasOwnProperty"
 			],
 			[
-				"co",
-				"connection"
-			],
-			[
 				"ni",
 				"nickname"
 			],
 			[
-				"in",
-				"indexOf"
-			],
-			[
-				"si",
-				"socketId"
-			],
-			[
-				"o",
-				"on"
-			],
-			[
-				"t",
-				"text"
-			],
-			[
 				"ro",
 				"room"
-			],
-			[
-				"fi",
-				"function"
 			],
 			[
 				"sock",
@@ -74,14 +250,6 @@
 			[
 				"for",
 				"for	for (…) {…}"
-			],
-			[
-				"s",
-				"size"
-			],
-			[
-				"on",
-				"onlineUsersId"
 			],
 			[
 				"le",
@@ -130,18 +298,6 @@
 			[
 				"re",
 				"res"
-			],
-			[
-				"su",
-				"usersInRoomSummary"
-			],
-			[
-				"use",
-				"usersInRoom"
-			],
-			[
-				"i",
-				"id"
 			],
 			[
 				"roo",
@@ -204,10 +360,6 @@
 				"airsDayOfWeek"
 			],
 			[
-				"nam",
-				"seriesName"
-			],
-			[
 				"net",
 				"next"
 			],
@@ -232,20 +384,12 @@
 				"next"
 			],
 			[
-				"fun",
-				"function"
-			],
-			[
 				"g",
 				"gulp"
 			],
 			[
 				"angular",
 				"angular-strap"
-			],
-			[
-				"m",
-				"meta"
 			],
 			[
 				"b",
@@ -256,18 +400,34 @@
 	"buffers":
 	[
 		{
-			"file": "lib/chat_server.js",
+			"file": "public/css/style.css",
 			"settings":
 			{
-				"buffer_size": 2870,
+				"buffer_size": 2972,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server.js",
+			"file": "public/scripts/chatApp.js",
 			"settings":
 			{
-				"buffer_size": 309,
+				"buffer_size": 2665,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 2251,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/chat_server.js",
+			"settings":
+			{
+				"buffer_size": 4872,
 				"line_ending": "Windows"
 			}
 		},
@@ -275,40 +435,8 @@
 			"file": "lib/app.js",
 			"settings":
 			{
-				"buffer_size": 1202,
+				"buffer_size": 677,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n	var UserInTheRoom = io.nsps['/'].adapter.rooms[room],\n	for(var id in UserInTheRoom){\n		to = nicknames[socketId].toString();\n		break;\n	}\n	\n	namesUsed.push(name);\n	user = new User({\n		_id: socket.id,\n		name: name,\n		to: to,\n		message: \n	})\n\n\n		var usersInRoomSummary = \"Users in this room: \"\n	var usersInRoom = io.nsps['/'].adapter.rooms[room];\n		for (var socketId in usersInRoom) {\n    		usersInRoomSummary += (nicknames[socketId].toString() + \" \");\n		}\n\n		console.log(usersInRoomSummary);\n\n		socket.emit('message', {text: usersInRoomSummary});\n\n\nio.nsps['/'].adapter.rooms[room] // clients connected to room\nio.nsps['/'].connected  //all clients connected to socket.io\nio.sockets.adapter.rooms  //all rooms\n\n\nMyModel.update({@1 name: 'Tobi' }, {@2 ferret: true }, {@3 multi: true }, function @4(err, numberAffected, raw) {\n  if (err) return handleError(err);\n  console.log('The number of updated documents was %d', numberAffected);\n  console.log('The raw response from Mongo was ', raw);\n}); \n\n\n@1 - CONDITIONS\n@2 - UPDATE\n@3 - OPTOPNS {safe, UPSERT, MULTI, STRICT, OVERWITE}\n@4 - ERR, count of updated documents Mongo reported, full response from Mongo\n\n\nvar patners = io.nsps[a].adapter.rooms['lobby'];\n		for(var socketId in patners){\n			if(socket.id != socketId){\n			var patner = {\n				nickname: nicknames[socketId].toString(),\n				socketId: socketId };\n			break;\n			}\n		}\n\nfunction randomString(length) {\n	var StrWallet =  '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';\n    var result = '';\n    for (var i = length; i > 0; --i) result += StrWallet[Math.round(Math.random() * (StrWallet.length - 1))];\n    return result;\n}\n\nsocket.leave(currentRoom[socket.id]);\n\n\nvar userSchema = new mongoose.Schema({\n	id: String,\n	name: String,\n	to: [{\n		name: String,\n		message: [{\n			content: String,\n			timestamp: Date\n		}]\n	}]\n});\n\nvar User = mongoose.model(' User', userSchema);\nmongoose.connect('localhost:27017', function(){\n	console.log('mongoose connected');\n});\n\n		var patners = io.nsps['/'].adapter.rooms['lobby'];\n		for(var socketId in patners){\n			if(socket.id != socketId){\n			var patner = {\n				nickname: nicknames[socketId].toString(),\n				socketId: socketId };\n			break;\n			}\n		}\n\n\nObject.size = function(Obj){\n	var size = 0, key;\n	for(key in Obj){\n		if(Obj.hasOwnProperty(key))\n			size++;\n	}\n	return size;\n}\n\n		setInterval(function(){\n			var onlineUsersId = io.nsps['/'].connected;\n			var size = Object.size(onlineUsersId);\n			var onlineUsers = \"\";\n			if(size > 1){\n				for (var socketId in onlineUsersId) {\n					if (socketId != socket.id)\n		    		onlineUsers += (nicknames[socketId].toString() + \" \");\n				}\n				onlineUsers = onlineUsers.substring(0,onlineUsers.length-1)\n			}\n			socket.emit('onlineUsers', onlineUsers);\n		}, 1000);\n	});\n\n",
-			"settings":
-			{
-				"buffer_size": 2768,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/scripts/chat.js",
-			"settings":
-			{
-				"buffer_size": 797,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 843,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/scripts/chat_ui.js",
-			"settings":
-			{
-				"buffer_size": 1854,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -340,12 +468,26 @@
 	"expanded_folders":
 	[
 		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app",
-		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib"
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/scripts",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/scripts/vendor"
 	],
 	"file_history":
 	[
-		"/home/saiteja/Documents/AngularJs/showTracker/server.js",
+		"/home/saiteja/.config/sublime-text-3/Packages/C++.sublime-build",
+		"/home/saiteja/.config/sublime-text-3/Packages/C++/C++.sublime-build",
+		"/media/saiteja/Repo/untitled.sublime-build",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/index.html",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/css/style.css",
+		"/media/saiteja/Repo/Desktop/Incompleted/chat/css/base.css",
+		"/media/saiteja/Repo/Desktop/Incompleted/chat/index.html",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/scripts/chatApp.js",
 		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/server.js",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/app.js",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/lib/chat_server.js",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/scripts/chat_ui.js",
+		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/public/scripts/chat.js",
+		"/home/saiteja/Documents/AngularJs/showTracker/server.js",
 		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/package.json",
 		"/media/saiteja/Repo/Production/NodeJS/Projects/multi-room chat app/generator/app.js",
 		"/home/saiteja/Untitled Document",
@@ -392,9 +534,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 104.0,
 		"where_history":
 		[
+			"<open files>",
+			"<open_files>",
+			"",
 			"<open files>",
 			""
 		]
@@ -405,117 +550,133 @@
 		"find_history":
 		[
 			"console.log",
-			"processUserInput",
-			"click",
-			"curr",
-			"size",
-			"curr",
-			"current",
-			"wallet",
-			"click",
-			"leave",
-			"join",
-			"current",
-			"handleRoomJoining",
-			", room",
-			"patner",
-			"room",
-			"join",
-			"room.newRoom",
-			"handleRoomJoining(",
-			"handleRoomJoining(socket,",
-			"handleRoomJoining(socket, socket)",
-			"join",
-			"patner",
-			"get",
-			"patner",
-			".join",
-			"push",
-			"change",
-			"joinRoom",
-			"save",
-			"' ",
-			"error",
-			"err",
-			"not",
-			"nick",
-			"user not",
-			"handle",
-			"send",
-			"'message'",
-			"save",
-			"handleMessageBroadcasting",
-			"patner",
-			"user",
-			"emit('message",
+			"email",
+			"mode",
+			"mod",
+			"emailid",
+			"find",
+			"messa",
+			"conver",
+			"con",
 			"message",
-			"schema",
-			"sendMessage",
-			"val",
-			"join",
-			"io.",
-			"io.'",
-			"nickname",
-			"process",
-			"consol",
-			"console.log",
-			"size",
-			"jque",
-			"Sch",
-			"conn",
-			"id",
-			"nicknames",
-			"names",
-			"namesU",
-			"render",
-			"view",
-			"join",
-			"handleRoomJoi",
-			"join",
-			"emit",
-			"join",
+			"room-list",
+			"room-list ",
+			"textbox",
+			"sele",
+			"left",
 			"console",
-			"adapter",
-			"mana",
-			"broad",
-			"io.sockets.on",
-			"broad",
-			"delete",
-			"for",
-			"delet",
-			"for",
-			"require('socket",
-			"message'",
-			"room change",
-			"is ",
-			"io.socket.manager",
-			"io.socket.",
-			"room",
-			"rooms",
+			"conso",
+			"console",
+			"dis",
 			"io",
-			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
-			"function handleRoomJoining(socket) {\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
-			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}",
-			"function handleRoomJoining(socket){\n	socket.on('join', function(room){\n		socket.leave(currentRoom[socket.id]);\n		joinRoom(socket, room.newRoom);\n	});\n}\n",
-			"console",
-			"TV show has been added",
-			"added",
-			"already",
-			"filterByGenre",
-			"app.get('*', function(req, res) {\n  res.redirect('/#' + req.originalUrl);\n});",
-			"app.post('/api/shows', function (req, res, next){",
-			"post",
-			"fromnow",
-			"error",
-			"err",
-			"userSchema.pre('save', function(next) {\n  var user = this;\n  if (!user.isModified('password')) return next();\n  bcrypt.genSalt(10, function(err, salt) {\n    if (err) return next(err);\n    bcrypt.hash(user.password, salt, function(err, hash) {\n      if (err) return next(er",
-			"userSchema.pre('save', function(next) {\n  var user = this;\n  if (!user.isModified('password')) return next();\n  bcrypt.genSalt(10, function(err, salt) {\n    if (err) return next(err);\n    bcrypt.hash(user.password, salt, function(err, hash) {\n      if (err) return next(err);\n      user.password = hash;\n      next();\n    });\n  });\n});",
-			"app.post",
-			"save",
-			"seriesName",
-			"type=\"text/javascript\" ",
-			"scr=\"vendor",
-			"scr"
+			"dis",
+			"handleClientDisconnection",
+			"join",
+			"updateOnlineUsers",
+			"join",
+			"updateOnlineUsers",
+			"cb",
+			"update",
+			"current",
+			"size",
+			"guestnumber",
+			"current",
+			"surrent",
+			"textbox",
+			"text",
+			"socket.emit('",
+			"'message'",
+			"msgs",
+			"msg.text",
+			"socket",
+			"3",
+			"message",
+			"'message'",
+			"message",
+			"'message",
+			"'message'",
+			"msgPack",
+			"'message'",
+			"message",
+			"consol",
+			"signup",
+			"sign",
+			"sig",
+			"ng-submit",
+			"on",
+			"onS",
+			"onSubmit",
+			"console.log",
+			"sockets[",
+			"patnerSelected(",
+			"patnerSelected",
+			"sendPreviousMessages",
+			"handleClientDisconnection",
+			"sockets",
+			"].id",
+			"msgText",
+			"textbox",
+			"msgText",
+			"signup",
+			"msgs",
+			"textbox",
+			"go",
+			"CONSOLE.LOG",
+			"debug",
+			"$scope.name",
+			"length",
+			"class",
+			"console.",
+			"cons",
+			"name",
+			"form",
+			"assign name",
+			"[type='text']",
+			"form",
+			"<button type=\"submit\">Send</button>",
+			"form",
+			"ng-submi",
+			"is",
+			"form",
+			"name",
+			"nam",
+			"box",
+			"trans",
+			"box",
+			"trans",
+			"patnerName",
+			"signup()",
+			"joinRoom",
+			"submit",
+			"name",
+			"input",
+			"input['text']",
+			"input",
+			"input['text']",
+			"inp",
+			"form",
+			"patnet",
+			"patner",
+			"#footer",
+			"li",
+			"font",
+			"text-al",
+			"text",
+			"cont",
+			"user",
+			"left",
+			"over",
+			"left",
+			"over",
+			"message",
+			"messages",
+			"font",
+			"emit",
+			"name",
+			"sender",
+			".on('message',",
+			".on(\"message\"",
+			"message"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -523,6 +684,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"log",
+			".footer",
+			".sender",
+			"if(socket.id > patnerId){\n			var patner1 = nicknames[socket.id];\n			var patner2 = nicknames[patnerId]\n		}else{\n			var patner1 = nicknames[patnerId];\n			var patner2 = nicknames[socket.id];\n		}",
+			"sockets",
 			"StrWallet",
 			"io.on",
 			"io.sockets.",
@@ -541,146 +707,53 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "lib/chat_server.js",
+					"file": "public/css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2870,
+						"buffer_size": 2972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13,
-								13
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "server.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 309,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								215,
-								215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "lib/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1202,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								293,
-								293
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2766,
-								2766
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 911.0,
+						"translation.y": 1881.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "public/scripts/chat.js",
+					"buffer": 1,
+					"file": "public/scripts/chatApp.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 797,
+						"buffer_size": 2665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6,
-								6
+								21,
+								21
 							]
 						],
 						"settings":
@@ -696,20 +769,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "public/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 843,
+						"buffer_size": 2251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								829,
+								829
 							]
 						],
 						"settings":
@@ -718,27 +791,33 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 107.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
-					"buffer": 6,
-					"file": "public/scripts/chat_ui.js",
+					"buffer": 3,
+					"file": "lib/chat_server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1854,
+						"buffer_size": 4872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2805,
+								2805
 							]
 						],
 						"settings":
@@ -747,10 +826,38 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 740.0,
+						"translation.y": 1352.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "lib/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 677,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								302,
+								302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -832,14 +939,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 186.0,
 	"status_bar_visible": true,
 	"template_settings":

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en' ng-app="chatApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Chat</title>
+  <link rel="icon" type="image/png" href="favicon.ico"/>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body ng-controller="chatController">
+	<h1>Private Chat</h1>
+	<h3>Hi! {{name}}</h3>
+	<div id='content'>
+		<div id='room'>{{patner}}</div> 
+		<div id='room-list' ng-init="patner = 'lobby'">
+			<ul>
+			   <li ng-repeat="user in onlineUsers" ng-click="patnerSelected(user);">{{user}}</li>
+			</ul>
+		</div> 
+		
+		<div id='messages'>
+			<div name="chatbox" ng-repeat="msg in msgs track by $index" ng-class="{'focus' : $last }">
+   			<strong>{{msg.sender}}</strong> : {{msg.text}} 
+   			<span am-time-ago="msg.timestamp" am-preprocess="unix"></span>
+   			<a id="bottom"></a>
+			</div>
+		</div>
+
+		<form id='send-form' ng-submit="sendMsg()" action="" name ="textbox">
+			<input id='send-message' name="msgText" ng-model="msgText"/>
+		</form>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/scripts/vendor/moment.js"></script>
+	<script src="/scripts/vendor/angular.js"></script>
+	<script src="/scripts/vendor/angular-moment.min.js"></script>
+	<script src="scripts/chatApp.js"></script>
+</body>
+</html>

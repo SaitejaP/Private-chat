@@ -1,0 +1,54 @@
+body {
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+	color: #00B7FF;
+}
+li{
+	list-style-type: none;
+}
+#body{
+	width: 320px;
+	height: 480px;
+	margin: 0px auto;
+	border: 1px solid #ddd;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 320px 480px;
+	position: relative;
+}
+#content { 
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#room { 
+	background-color: #ddd;
+	margin-bottom: 1em;
+}
+#messages { 
+	width: 690px;
+	height: 300px;
+	overflow: auto; 
+	background-color: #eee;
+	margin-bottom: 1em;
+	margin-right: 10px;
+}
+#room-list {
+	float: right;
+	width: 100px;
+	height: 300px;
+	overflow: auto;
+}
+#room-list div {
+	border-bottom: 1px solid #eee;
+}
+#room-list div:hover {
+	background-color: #ddd;
+}
+#send-message {
+	width: 700px;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}

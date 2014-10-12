@@ -7,9 +7,9 @@ app.get('/', function(req, res){
 });
 
 var server = http.Server(app);
+chatServer.listen(server);
 
 server.listen(3000, function(){
   console.log('listening on port:3000');
 });
 
-chatServer.listen(server);

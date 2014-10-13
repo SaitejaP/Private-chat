@@ -105,7 +105,6 @@ app.controller("chatController", ['$scope', 'socket', '$location', '$anchorScrol
 	}
 	var sanitizeText = function(text){
 		text = text.trim();
-		text = escape(text);
 		return text;
 	}
 }]);

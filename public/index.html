@@ -7,20 +7,21 @@
   <title>Private Chat</title>
   <link rel="icon" type="image/png" href="favicon.ico"/>
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<!-- <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
- -->  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body ng-controller="chatController">
 	<h3>Private Chat</h3>
 	<div ng-if="!isNameAssigned()">
 		<form ng-submit="signup()" name="signupForm"  class="signup">
 			Name: <input type="text" pattern="[a-zA-Z0-9_-]{4,10}" placeholder="only alpha-numeric [min 4 char]" name="userName" ng-model="userName" required/><br />
-		    E-mail: <input type="email" name="userEmail" ng-model="userEmail" required/><br />
+		    	E-mail: <input type="email" name="userEmail" ng-model="userEmail" required/><br />
 			<button type="submit">Submit</button><br /><br />
 			<span>Hi {{userName}}</span>
 		</form>
 	</div>
+	
 	<div id='body' ng-if="isNameAssigned()">
 		<div id="header">
 			<i class="fa fa-arrow-left"></i>
